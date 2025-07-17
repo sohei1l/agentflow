@@ -16,10 +16,11 @@ AgentFlow is a powerful command-line tool that decomposes complex goals into man
 
 ## 🚀 Installation
 
-### Install from NPM
+### Install via Homebrew (Recommended)
 
 ```bash
-npm install -g agentflow
+brew tap sohei1l/agentflow
+brew install agentflow
 ```
 
 ### Install from Source
@@ -32,9 +33,7 @@ npm run build
 npm link
 ```
 
-### Install via Homebrew (macOS)
-
-*Coming soon - Homebrew formula in development*
+> **Note**: The `agentflow` name is already taken on NPM, so we distribute exclusively through Homebrew for easy installation and updates.
 
 ## 🔧 Setup
 
