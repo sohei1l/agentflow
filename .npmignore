@@ -1,0 +1,31 @@
+# Source files
+src/
+tsconfig.json
+.eslintrc.json
+
+# Development files
+.git/
+.vscode/
+.idea/
+
+# Tests
+tests/
+*.test.ts
+*.spec.ts
+
+# Development dependencies
+node_modules/
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Config files that may contain secrets
+.agentflow.json
+
+# Documentation source
+docs/
+
+# CI/CD
+.github/
