@@ -200,35 +200,5 @@ program
     console.log(chalk.gray('  agentflow config set maxIterations 200'));
   });
 
-// Help command override
-program
-  .command('help')
-  .description('Show help information')
-  .action(() => {
-    console.log(chalk.blue('🤖 AgentFlow - AI Agent Orchestration CLI\n'));
-    console.log(chalk.white('AgentFlow is a goal-driven autonomous agent that decomposes objectives'));
-    console.log(chalk.white('into tasks, selects appropriate tools, and executes them in parallel.\n'));
-    
-    program.help();
-  });
-
-// Error handling
-program.configureHelp({
-  formatHelp: (cmd, helper) => {
-    return chalk.blue('🤖 AgentFlow - AI Agent Orchestration CLI\n\n') + helper.formatHelp(cmd, helper);
-  }
-});
-
-program.exitOverride();
-
-try {
-  program.parse();
-} catch (error: any) {
-  if (error.exitCode === 0) {
-    // Help was shown, exit normally
-    process.exit(0);
-  } else {
-    console.error(chalk.red(`❌ CLI Error: ${error.message}`));
-    process.exit(1);
-  }
-}
+// Parse command line
+program.parse();
